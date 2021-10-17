@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Movies from './movies';
 
+// import component and extend read class
 class Read extends Component
 {
+    // create an api for the movie details
     state = {
         mymovies: [
             {
@@ -30,13 +32,18 @@ class Read extends Component
             
     };
 
+    // wrap return in render method
     render(){
         return(
+            // create a div for html code
             <div>
                 <h1>This is my Read Component!</h1>
+                {/* call the films function in the Movies class and populate the MovieItem with the api */}
                 <Movies films={this.state.mymovies}></Movies>
             </div>
         );
     }
 }
+
+// export Read class
 export default Read;

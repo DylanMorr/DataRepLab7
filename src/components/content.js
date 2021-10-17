@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 // import componet from react library and extend Content class
-class Content extends Component {
+class Content extends Component 
+{
     // wrap return in the render method
     render() {
         return (
@@ -14,5 +15,5 @@ class Content extends Component {
     }
 }
 
-// export footer class
+// export Content class
 export default Content;

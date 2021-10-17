@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 // import componet from react library and extend header class
-class Header extends Component {
+class Header extends Component 
+{
     // wrap return in the render method
     render() {
         return (

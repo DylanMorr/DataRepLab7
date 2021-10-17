@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 // import componet from react library and extend footer class
-class Footer extends Component {
+class Footer extends Component 
+{
     // wrap return in the render method
     render() {
         return (
