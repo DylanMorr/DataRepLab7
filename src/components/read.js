@@ -11,8 +11,8 @@ class Read extends Component {
 
     // component life cycle hook gets called when component gets mounted / active in view
     componentDidMount() {
-        // use axios to retrieve data from json api
-        axios.get('https://jsonblob.com/api/jsonblob/894944504570986496')
+        // use axios to retrieve data from server 
+        axios.get('http://localhost:4000/api/movies')
             .then((response) => {
                 // update array movies with data
                 this.setState({ mymovies: response.data.movies })

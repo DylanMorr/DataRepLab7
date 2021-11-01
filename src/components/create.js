@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 // import Component from react library and extend Create class
 class Create extends Component {
@@ -52,6 +53,25 @@ class Create extends Component {
         alert("Movie: " + this.state.Title
             + " " + this.state.Year
             + " " + this.state.Poster);
+
+        // create a newMovie object to send data to server
+        const newMovie = {
+            Title: this.state.Title,
+            Year: this.state.Year,
+            Poster: this.state.Poster
+        }
+
+        // use axios to post data using newMovie object
+        axios.post('http://localhost:4000/api/movies', newMovie)
+            // needs a promise for async
+            .then((res) => {
+                // log to console movie entries 
+                console.log(res);
+            })
+            .catch((err) => {
+                // catch any error
+                console.log(err);
+            });
     }
 
     // wrap return in the render method
@@ -99,6 +119,7 @@ class Create extends Component {
                     {/* Submit Button Div */}
                     <div className='form-group'>
                         {/* Submit Control */}
+                        <br></br>
                         <input type='submit'
                             value='Add Movie'
                             className='btn btn-primary'></input>
