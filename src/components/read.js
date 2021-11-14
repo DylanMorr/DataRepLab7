@@ -15,7 +15,7 @@ class Read extends Component {
         axios.get('http://localhost:4000/api/movies')
             .then((response) => {
                 // update array movies with data
-                this.setState({ mymovies: response.data.movies })
+                this.setState({ mymovies: response.data })
             })
             // if theres a problem log an error to the console
             .catch((error) => {
